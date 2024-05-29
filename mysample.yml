@@ -1,5 +1,5 @@
 ---
-- hostsgit: all
+- hosts: all
   become: yes
   tasks:
     - name: intall git

@@ -1,17 +1,9 @@
 ---
 - hosts: all
   become: yes
-  tasks:
-    - name: intall git
-      dnf:
-         name: git
-         state: present
-    - name: intall tree
-      dnf:
-         name: tree
-         state: present    
-    - name: intall httpd
-      dnf:
+  tasks:   
+    - name: start httpd
+      service:
          name: httpd
-         state: present
+         state: started
    

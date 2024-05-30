@@ -5,9 +5,9 @@
     - name: install httpd
       dnf:
          name: "{{webpack}}"
-         state: absent 
-    - name: start httpd
-      service:
-         name: "{{webpack}}"
-         state: Stopped
+         state: present 
+    #- name: start httpd
+      #service:
+        # name: "{{webpack}}"
+        # state: Stopped
    

@@ -1,1 +1,5 @@
-172.31.46.247
+[mywebservers]
+172.31.15.200
+
+[myredhatserver]
+172.31.15.2

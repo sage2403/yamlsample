@@ -1,9 +1,13 @@
 ---
-- hosts: all
+- hosts: mywebservers
   become: yes
-  tasks:   
+  tasks:  
+    - name: install httpd
+      dnf:
+         name: "{{webpack}}"
+         state: present 
     - name: start httpd
       service:
-         name: httpd
-         state: stopped
+         name: "{{webpack}}"
+         state: started
    

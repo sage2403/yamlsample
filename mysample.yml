@@ -6,13 +6,13 @@
       dnf:
          name: "{{webpack}}"
          state: present 
-    when: ansible_os_family =="RedHat"
+      when: ansible_os_family =="RedHat"
     
     - name: install apache2
       apt:
          name: "{{webpack}}"
          state: present  
-    when: ansible_os_family =="Debian"
+      when: ansible_os_family =="Debian"
 
     - name: Start httpd/apache2
       service:

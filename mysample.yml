@@ -1,20 +1,22 @@
 ---
 - hosts: mywebservers
   become: yes
-  tasks:  
+  tasks: 
+    - name: Start httpd/apache2
+      service:
+         name: "{{webpack}}"
+         state: stopped
+
     - name: install httpd
       dnf:
          name: "{{webpack}}"
-         state: present 
+         state: absent 
       when: ansible_os_family =="RedHat"
     
     - name: install apache2
       apt:
          name: "{{webpack}}"
-         state: present  
+         state: absent 
       when: ansible_os_family =="Debian"
 
-    - name: Start httpd/apache2
-      service:
-         name: "{{webpack}}"
-         state: started
+  

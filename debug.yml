@@ -1,0 +1,10 @@
+---
+- hosts: 172.31.0.190
+  become: yes
+  tasks:
+  - name: Run command
+    command: hostname -f
+    register: myresult
+  - name: display result
+    debug:
+      msg: "{myresult}"

@@ -6,8 +6,3 @@
       dnf:
          name: "{{webpack}}"
          state: present 
-    #- name: start httpd
-      #service:
-        # name: "{{webpack}}"
-        # state: Stopped
-   

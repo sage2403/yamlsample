@@ -1,22 +1,6 @@
 ---
-- hosts: 172.31.0.190
+- hosts: mywebservers
   become: yes
   tasks:
   - name: Run command
-    command: hostname -f
-    register: myresult
-  - name: display result
-    debug:
-      msg: "{{myresult}}"
-
-  - name: install git
-    apt:
-       name: git
-       state: present
-    when: myresult.stderr==""
-    
-  - name: install tree
-    apt:
-       name: tree
-       state: present
-    when: myresult.stderr!=""
+    command: sudo init 0

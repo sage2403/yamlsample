@@ -1,5 +1,5 @@
 ---
 - hosts: mywebservers
   become: yes
-  role:
+  roles:
   - {role: mytomcat, when: ansible_os_family=="RedHat"}

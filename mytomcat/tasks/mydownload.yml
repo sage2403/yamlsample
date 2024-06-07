@@ -11,4 +11,4 @@
 - name: extract
   command:
      cmd: tar -zvxf /home/harm/tomcat-9.0.55.tar.gz -C /opt/tomcat --strip-components=1
-     creates: /opt/tomcat
+     creates: /opt/tomcat/LICENSE

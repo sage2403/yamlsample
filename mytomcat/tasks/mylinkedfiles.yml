@@ -1,0 +1,10 @@
+---
+- name: Create link files for Tomcat Server up
+  command:
+    cmd: ln -s /opt/tomcat/bin/startup.sh /usr/local/bin/tomcatup
+    creates: /usr/local/bin/tomcatup
+
+- name: Create link files for Tomcat Server Down
+  command:
+    cmd: ln -s /opt/tomcat/bin/shutdown.sh /usr/local/bin/tomcatdown
+    creates: /usr/local/bin/tomcatdown

@@ -1,0 +1,6 @@
+---
+- name: startup perm
+  command: chmod +x /opt/tomcat/bin/startup.sh
+
+- name: shutdown perm
+  command: chmod +x /opt/tomcat/bin/shutdown.sh

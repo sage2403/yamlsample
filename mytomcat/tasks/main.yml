@@ -1,6 +1,6 @@
 ---
 # tasks file for mytomcat
-- include_taks: installjava.yml
-- include_taks: mydownload.yml
-- include_taks: mypermission.yml
-- include_taks: mylinkedfiles.yml
+- include_tasks: installjava.yml
+- include_tasks: mydownload.yml
+- include_tasks: mypermission.yml
+- include_tasks: mylinkedfiles.yml

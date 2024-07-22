@@ -1,0 +1,14 @@
+---
+- name: download war file
+  get_url:
+      url: https://github.com/AKSarav/SampleWebApp/raw/master/dist/SampleWebApp.war
+      dest: /opt/tomcat/webapps/SampleWebApp.war
+      force_basic_auth: yes
+
+- name: down
+  command:
+       cmd: tomcatdown
+
+- name: catup2
+  command:
+       cmd: tomcatup

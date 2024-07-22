@@ -18,3 +18,7 @@
   command:
        cmd: ln -s /opt/tomcat/apache-tomcat-8.5.100/bin/shutdown.sh /usr/local/bin/tomcatdown
        creates: /usr/local/bin/tomcatdown
+
+- name: catup
+  command:
+       cmd: tomcatup

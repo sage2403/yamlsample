@@ -1,22 +1,6 @@
 ---
 - hosts: mywebservers
   become: yes
-  tasks: 
-    - name: Start httpd/apache2
-      service:
-         name: "{{webpack}}"
-         state: stopped
-
-    - name: install httpd
-      dnf:
-         name: "{{webpack}}"
-         state: absent 
-      when: ansible_os_family =="RedHat"
-    
-    - name: install apache2
-      apt:
-         name: "{{webpack}}"
-         state: absent 
-      when: ansible_os_family =="Debian"
-
-  
+  roles: 
+     -  {role: mytomserver, when: ansible_os_family=="RedHat"}
+     

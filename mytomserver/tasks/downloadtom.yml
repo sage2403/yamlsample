@@ -6,7 +6,7 @@
 
    -  name: downlod tom tar file
       get_url:
-           url: https://dlcdn.apache.org/tomcat/tomcat-8/v8.5.100/bin/apache-tomcat-8.5.100.tar.gz.conf
+           url: https://dlcdn.apache.org/tomcat/tomcat-8/v8.5.100/bin/apache-tomcat-8.5.100.tar.gz
            dest: /opt/tomcat/apache-tomcat-8.5.100.tar.gz.conf
            force_basic_auth: yes
 

@@ -3,6 +3,6 @@
   become: yes
   tasks:
    -  name: installjdk
-     dnf:
+      dnf:
         name: java-11-amazon-corretto
         state: present

@@ -1,5 +1,5 @@
 ---
    -  name: installjdk
       dnf:
-        name: java-11-amazon-corretto
+        name: java-1.8*
         state: present

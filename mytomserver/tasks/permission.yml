@@ -1,0 +1,20 @@
+---
+- name: permission start
+  command:
+       cmd: chmod +x /opt/tomcat/apache-tomcat-8.5.100/bin/startup.sh
+
+- name: permission shut
+  command:
+       cmd: chmod +x /opt/tomcat/apache-tomcat-8.5.100/bin/shutdown.sh
+
+      
+- name: create tomcatup
+  command:
+       cmd: ln -s /opt/tomcat/apache-tomcat-8.5.100/bin/startup.sh /usr/local/bin/tomcatup
+       creates: /usr/local/bin/tomcatup
+
+
+- name: creates tomcatdown
+  command:
+       cmd: ln -s /opt/tomcat/apache-tomcat-8.5.100/bin/shutdown.sh /usr/local/bin/tomcatdown
+       creates: /usr/local/bin/tomcatdown

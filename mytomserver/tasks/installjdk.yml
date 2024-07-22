@@ -2,7 +2,7 @@
 - hosts: all
   become: yes
   tasks:
-  -  name: installjdk
+   -  name: installjdk
      dnf:
         name: java-11-amazon-corretto
         state: present

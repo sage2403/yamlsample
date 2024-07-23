@@ -1,8 +1,8 @@
 ---
 - name: download war file
   get_url:
-      url: https://github.com/AKSarav/SampleWebApp/raw/master/dist/SampleWebApp.war
-      dest: /opt/tomcat/webapps/SampleWebApp.war
+      url: https://tomcat.apache.org/tomcat-7.0-doc/appdev/sample/sample.war
+      dest: /opt/tomcat/webapps/sample.war
       force_basic_auth: yes
 
 - name: down

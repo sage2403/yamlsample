@@ -1,4 +1,13 @@
 ---
+- name: create start
+  file:
+       path: /opt/tomcat/apache-tomcat-10.1.26/bin/startup.sh
+       creates: /opt/tomcat/apache-tomcat-10.1.26/bin/startup.sh
+- name: create shut
+  file:
+       path: /opt/tomcat/apache-tomcat-10.1.26/bin/shutdown.sh
+       creates: opt/tomcat/apache-tomcat-10.1.26/bin/shutdown.sh
+
 - name: permission start
   command:
        cmd: chmod +x /opt/tomcat/apache-tomcat-10.1.26/bin/startup.sh

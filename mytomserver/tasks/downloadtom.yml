@@ -7,12 +7,12 @@
    -  name: downlod tom tar file
       get_url:
            url: https://dlcdn.apache.org/tomcat/tomcat-10/v10.1.26/bin/apache-tomcat-10.1.26.tar.gz
-           dest: /opt/tomcat/apache-tomcat-8.5.100.tar.gz.conf
+           dest: /opt/tomcat/apache-tomcat-10.1.26.tar.gz
            force_basic_auth: yes
 
    -  name: extract
       command:
-          cmd: tar -zvxf /opt/tomcat/apache-tomcat-8.5.100.tar.gz.conf
+          cmd: tar -zvxf /opt/tomcat/apache-tomcat-10.1.26.tar.gz
           creates: /opt/tomcat/LICENSE
          
 

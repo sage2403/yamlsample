@@ -1,31 +1,22 @@
 ---
-- name: create start
-  file:
-       path: /opt/tomcat/apache-tomcat-10.1.26/bin/startup.sh
-       creates: /opt/tomcat/apache-tomcat-10.1.26/bin/startup.sh
-- name: create shut
-  file:
-       path: /opt/tomcat/apache-tomcat-10.1.26/bin/shutdown.sh
-       creates: opt/tomcat/apache-tomcat-10.1.26/bin/shutdown.sh
-
 - name: permission start
   command:
-       cmd: chmod +x /opt/tomcat/apache-tomcat-10.1.26/bin/startup.sh
+       cmd: chmod +x /opt/tomcat/tomcat-9.0.55.tar/bin/startup.sh
 
 - name: permission shut
   command:
-       cmd: chmod +x /opt/tomcat/apache-tomcat-10.1.26/bin/shutdown.sh
+       cmd: chmod +x /opt/tomcat/tomcat-9.0.55.tar/bin/shutdown.sh
 
       
 - name: create tomcatup
   command:
-       cmd: ln -s /opt/tomcat/apache-tomcat-10.1.26/bin/startup.sh /usr/local/bin/tomcatup
+       cmd: ln -s /opt/tomcat/tomcat-9.0.55.tar/bin/startup.sh /usr/local/bin/tomcatup
        creates: /usr/local/bin/tomcatup
 
 
 - name: creates tomcatdown
   command:
-       cmd: ln -s /opt/tomcat/apache-tomcat-10.1.26/bin/shutdown.sh /usr/local/bin/tomcatdown
+       cmd: ln -s /opt/tomcat/tomcat-9.0.55.tar/bin/shutdown.sh /usr/local/bin/tomcatdown
        creates: /usr/local/bin/tomcatdown
 
 - name: catup

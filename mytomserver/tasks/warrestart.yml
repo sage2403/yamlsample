@@ -1,9 +1,10 @@
 ---
 - name: download war file
-  template:
-     src: templates/msg.j2
-     dest: /opt/tomcat/webapps/msg.j2
-  
+  get_url:
+      url: https://tomcat.apache.org/tomcat-7.0-doc/appdev/sample/sample.war
+      dest: /opt/tomcat/webapps/sample.war
+      force_basic_auth: yes
+
 - name: down
   command:
        cmd: tomcatdown

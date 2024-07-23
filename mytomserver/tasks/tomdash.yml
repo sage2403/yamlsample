@@ -1,20 +1,20 @@
 ---
 - name: edit1
   template:
-     src: /mytemplates/host.j2
+     src: /templates/host.j2
      dest: /opt/tomcat/webapps/examples/META-INF/context.xml
 
 - name: edit2
   template:
-     src: /mytemplates/host.j2
+     src: /templates/host.j2
      dest: /opt/tomcat/webapps/host-manager/META-INF/context.xml
 
 - name: edit3
   template:
-     src: /mytemplates/host.j2
+     src: /templates/host.j2
      dest: /opt/tomcat/manager/META-INF/context.xml
 
 - name: edit4
   template:
-     src: /mytemplates/hostcontext.j2
+     src: /templates/hostcontext.j2
      dest: /opt/tomcat/tomcat-9.0.55.tar/conf/tomcat-users.xml

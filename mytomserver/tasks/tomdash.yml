@@ -9,10 +9,6 @@
      src: templates/host.j2
      dest: /opt/tomcat/webapps/host-manager/META-INF/context.xml
 
-- name: edit3
-  template:
-     src: templates/host.j2
-     dest: /opt/tomcat/manager/META-INF/context.xml
 
 - name: edit4
   template:

@@ -1,9 +1,13 @@
 ---
-- name: download war file
-  get_url:
-      url: https://tomcat.apache.org/tomcat-7.0-doc/appdev/sample/sample.war
-      dest: /opt/tomcat/webapps/sample.war
-      force_basic_auth: yes
+#- name: download war file
+  #get_url:
+      #url: https://tomcat.apache.org/tomcat-7.0-doc/appdev/sample/sample.war
+      #dest: /opt/tomcat/webapps/sample.war
+      #force_basic_auth: yes
+- name: copy python
+  template:
+     src: templates/power.py
+     dest: /opt/tomcat/webapps/power.py     
 
 - name: down
   command:
